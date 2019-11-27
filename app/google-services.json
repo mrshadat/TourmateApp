@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "139641594447",
+    "firebase_url": "https://tourmatebatch15-r7.firebaseio.com",
+    "project_id": "tourmatebatch15-r7",
+    "storage_bucket": "tourmatebatch15-r7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139641594447:android:61a50d8188c779b6ad003a",
+        "android_client_info": {
+          "package_name": "com.mrshadat.tourmatebatch15"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139641594447-50aekgq523v0k2fftsifmrfifjop53lj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVW49spQowAfR-M3gLixpAs9ST_b8A330"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139641594447-50aekgq523v0k2fftsifmrfifjop53lj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
