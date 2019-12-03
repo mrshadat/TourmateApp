@@ -1,56 +1,39 @@
 package com.mrshadat.tourmateapp;
 
-
-import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.Navigation;
 
-import android.view.LayoutInflater;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.mrshadat.tourmateapp.viewmodels.LoginViewModel;
 
+public class NavDrawerActivity extends AppCompatActivity {
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class LoginFragment extends Fragment {
     private TextView statusTv;
     private EditText emailEt, passwordEt;
     private Button loginBtn, registerBtn;
     private LoginViewModel loginViewModel;
 
-    public LoginFragment() {
-        // Required empty public constructor
-    }
-
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_nav_drawer);
 
-        // Inflate the layout for this fragment
         loginViewModel = ViewModelProviders.of(this).get(LoginViewModel.class);
-        return inflater.inflate(R.layout.fragment_login, container, false);
-    }
 
-    @Override
-    public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        statusTv = view.findViewById(R.id.statusTv);
-        emailEt = view.findViewById(R.id.emailEt);
-        passwordEt = view.findViewById(R.id.passwordEt);
-        loginBtn = view.findViewById(R.id.loginBtn);
-        registerBtn = view.findViewById(R.id.registerBtn);
+        statusTv = findViewById(R.id.statusTv);
+        emailEt = findViewById(R.id.emailEt);
+        passwordEt = findViewById(R.id.passwordEt);
+        loginBtn = findViewById(R.id.loginBtn);
+        registerBtn = findViewById(R.id.registerBtn);
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,8 +58,9 @@ public class LoginFragment extends Fragment {
             public void onChanged(LoginViewModel.AuthenticatinState authenticatinState) {
                 switch (authenticatinState) {
                     case AUTHENTICATED:
-                        Navigation.findNavController(view)
-                                .navigate(R.id.action_loginFragment_to_eventListFragment);
+                        Intent intent = new Intent(NavDrawerActivity.this, MainActivity.class);
+                        startActivity(intent);
+                        finish();
                         break;
 
                     case UNAUTHENTICATED:
