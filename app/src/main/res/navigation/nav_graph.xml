@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/eventListFragment"
         android:name="com.mrshadat.tourmateapp.EventListFragment"
-        android:label="fragment_event_list"
+        android:label="Event List"
         tools:layout="@layout/fragment_event_list" >
         <action
             android:id="@+id/action_eventListFragment_to_addEventFragment"
@@ -20,12 +20,12 @@
     <fragment
         android:id="@+id/addEventFragment"
         android:name="com.mrshadat.tourmateapp.AddEventFragment"
-        android:label="fragment_add_event"
+        android:label="Add New Event"
         tools:layout="@layout/fragment_add_event" />
     <fragment
         android:id="@+id/eventDetailsFragment"
         android:name="com.mrshadat.tourmateapp.EventDetailsFragment"
-        android:label="fragment_event_details"
+        android:label="Event Details"
         tools:layout="@layout/fragment_event_details" />
 
 </navigation>
