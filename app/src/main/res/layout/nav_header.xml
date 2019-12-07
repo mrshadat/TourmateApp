@@ -4,7 +4,6 @@
     android:layout_height="176dp"
     android:gravity="bottom"
     android:padding="8dp"
-    android:background="@drawable/nav_background"
     style="@style/ThemeOverlay.AppCompat.Dark">
 
 
@@ -15,6 +14,5 @@
         android:layout_height="wrap_content"
         style="@style/TextAppearance.AppCompat.Title"
         android:text="rishat.cse@gmail.com"/>
-
 
 </LinearLayout>

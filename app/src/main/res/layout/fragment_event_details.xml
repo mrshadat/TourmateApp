@@ -46,18 +46,21 @@
             android:layout_height="wrap_content"
             android:id="@+id/addExpenseBtn"
             android:text="add expense"
+            android:backgroundTint="@color/colorLightPurple"
             android:layout_gravity="center"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/addMomentBtn"
             android:text="Take photo"
+            android:backgroundTint="@color/colorLightPurple"
             android:layout_gravity="center"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/viewMomentBtn"
             android:text="View Gallery"
+            android:backgroundTint="@color/colorLightPurple"
             android:layout_gravity="center"/>
 
     </LinearLayout>
