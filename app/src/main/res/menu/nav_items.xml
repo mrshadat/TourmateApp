@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Current"
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_wb_sunny"/>
+
+
+    <item android:title="Forcast "
+        android:icon="@drawable/ic_cloud"
+        android:id="@+id/nav_notif"/>
+
+</menu>

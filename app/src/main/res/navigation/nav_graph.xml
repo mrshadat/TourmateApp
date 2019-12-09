@@ -27,5 +27,20 @@
         android:name="com.mrshadat.tourmateapp.EventDetailsFragment"
         android:label="Event Details"
         tools:layout="@layout/fragment_event_details" />
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.mrshadat.tourmateapp.WeatherFragment"
+        android:label="fragment_weather"
+        tools:layout="@layout/fragment_weather" />
+    <fragment
+        android:id="@+id/currentWeatherFragment"
+        android:name="com.mrshadat.tourmateapp.CurrentWeatherFragment"
+        android:label="fragment_current_weather"
+        tools:layout="@layout/fragment_current_weather" />
+    <fragment
+        android:id="@+id/forcastWeatherFragment"
+        android:name="com.mrshadat.tourmateapp.ForcastWeatherFragment"
+        android:label="fragment_forcast_weather"
+        tools:layout="@layout/fragment_forcast_weather" />
 
 </navigation>

@@ -11,8 +11,9 @@
 
        <item
         android:icon="@drawable/ic_brightness"
-        android:id="@id/eventListFragment"
+        android:id="@id/weatherFragment"
         android:title="Weather" />
+
     </group>
 
 </menu>
