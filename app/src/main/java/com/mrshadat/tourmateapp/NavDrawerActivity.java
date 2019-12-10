@@ -1,17 +1,21 @@
 package com.mrshadat.tourmateapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.Navigation;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.mrshadat.tourmateapp.viewmodels.LocationViewModel;
 import com.mrshadat.tourmateapp.viewmodels.LoginViewModel;
 
 public class NavDrawerActivity extends AppCompatActivity {
@@ -21,6 +25,7 @@ public class NavDrawerActivity extends AppCompatActivity {
     private Button loginBtn, registerBtn;
     private LoginViewModel loginViewModel;
 
+    private LocationViewModel locationViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +33,9 @@ public class NavDrawerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_nav_drawer);
 
         loginViewModel = ViewModelProviders.of(this).get(LoginViewModel.class);
+        locationViewModel = ViewModelProviders.of(this).get(LocationViewModel.class);
+
+        isLocationPermissionGranted();
 
         statusTv = findViewById(R.id.statusTv);
         emailEt = findViewById(R.id.emailEt);
@@ -76,5 +84,23 @@ public class NavDrawerActivity extends AppCompatActivity {
                 statusTv.setText(s);
             }
         });
+    }
+
+    private boolean isLocationPermissionGranted(){
+        if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) !=
+                PackageManager.PERMISSION_GRANTED){
+            requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 111);
+            return false;
+        }
+
+        return true;
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (requestCode == 111 && grantResults[0] ==
+                PackageManager.PERMISSION_GRANTED){
+            locationViewModel.getDeviceCurrentLocation();
+        }
     }
 }

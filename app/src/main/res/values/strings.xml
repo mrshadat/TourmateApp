@@ -12,4 +12,6 @@
     <string name="events">Events</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
+    <string name="weather_api_key">1a8b87f9f20917a1d953065e4a744c4e</string>
 </resources>
+
