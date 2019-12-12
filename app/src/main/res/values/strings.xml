@@ -13,5 +13,9 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="weather_api_key">a8c0b1a782fe191d17d048b2f0b15503</string>
+    <string name="weather_api_key2">d0b941339d6f075686460c7fe0912041</string>
+    <string name="weather_api_key3">f4f1e513f8351f02420cfcc85fc08378</string>
+    <string name="weather_api_key4">31b114dfbba8a5d3500917b2515db196</string>
+    <string name="weather_api_key5">d0b941339d6f075686460c7fe0912041</string>
 </resources>
 

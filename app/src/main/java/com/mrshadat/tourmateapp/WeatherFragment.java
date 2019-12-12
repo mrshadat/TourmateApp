@@ -55,11 +55,11 @@ public class WeatherFragment extends Fragment {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
                 switch (menuItem.getItemId()) {
-                    case R.id.nav_home:
+                    case R.id.current:
                         setFragment(currentWeatherFragment);
                         return true;
 
-                    case R.id.nav_notif:
+                    case R.id.forcast:
                         setFragment(forcastWeatherFragment);
                         return true;
 

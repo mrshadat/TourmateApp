@@ -15,11 +15,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
 import com.mrshadat.tourmateapp.viewmodels.LocationViewModel;
 import com.mrshadat.tourmateapp.viewmodels.NearbyViewModel;
 
@@ -30,7 +25,7 @@ import com.mrshadat.tourmateapp.viewmodels.NearbyViewModel;
 public class NearbyPlaceFragment extends Fragment {
 
     private LocationViewModel locationViewModel;
-    private GoogleMap googleMap;
+    //private GoogleMap googleMap;
     private Button restaurantBtn, atmBtn;
     private String type = "";
     private NearbyViewModel nearbyViewModel;

@@ -54,7 +54,6 @@ public class CurrentWeatherFragment extends Fragment {
                 ViewModelProviders.of(this)
                         .get(WeatherViewModel.class);
         locationViewModel.getDeviceCurrentLocation();
-
         return binding.getRoot();
     }
 
@@ -70,6 +69,7 @@ public class CurrentWeatherFragment extends Fragment {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }*/
+
                 binding.addressTV.setText(location.getLatitude() + " " + location.getLongitude());
             }
         });
@@ -85,12 +85,14 @@ public class CurrentWeatherFragment extends Fragment {
                         String date = EventUtils.getFormattedDate(response.getDt());
                         String city = response.getName();
                         String icon = response.getWeather().get(0).getIcon();
-                        Picasso.get().load(EventUtils.WEATHER_CONDITION_ICON_PREFIX+icon+".png")
+                        Picasso.get().load(EventUtils.WEATHER_CONDITION_ICON_PREFIX + icon + ".png")
                                 .into(binding.weatherIcon);
-                        binding.latLngTV.setText(temp+"\n"+date+"\n"+city);
+
+                        binding.latLngTV.setText(temp + "\n" + date + "\n" + city);
+
                     }
                 });
-      }
+    }
 
     private void convertLatLngToStreetAddress(Location location) throws IOException {
         Geocoder geocoder = new Geocoder(getActivity());
