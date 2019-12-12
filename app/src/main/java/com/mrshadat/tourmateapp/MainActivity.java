@@ -80,6 +80,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 navController.navigate(R.id.weatherFragment);
                 break;
 
+            case R.id.nearbyPlaceFragment:
+                navController.navigate(R.id.nearbyPlaceFragment);
+                break;
+
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;

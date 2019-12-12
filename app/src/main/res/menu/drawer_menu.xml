@@ -5,14 +5,19 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:icon="@drawable/ic_event"
             android:id="@id/eventListFragment"
+            android:icon="@drawable/ic_event"
             android:title="@string/events" />
 
-       <item
-        android:icon="@drawable/ic_brightness"
-        android:id="@id/weatherFragment"
-        android:title="Weather" />
+        <item
+            android:id="@id/weatherFragment"
+            android:icon="@drawable/ic_brightness"
+            android:title="Weather" />
+
+        <item
+            android:id="@id/nearbyPlaceFragment"
+            android:icon="@drawable/ic_place"
+            android:title="Nearby Place" />
 
     </group>
 

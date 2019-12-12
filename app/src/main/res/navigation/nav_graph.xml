@@ -42,5 +42,10 @@
         android:name="com.mrshadat.tourmateapp.ForcastWeatherFragment"
         android:label="fragment_forcast_weather"
         tools:layout="@layout/fragment_forcast_weather" />
+    <fragment
+        android:id="@+id/nearbyPlaceFragment"
+        android:name="com.mrshadat.tourmateapp.NearbyPlaceFragment"
+        android:label="fragment_nearby_place"
+        tools:layout="@layout/fragment_nearby_place" />
 
 </navigation>
